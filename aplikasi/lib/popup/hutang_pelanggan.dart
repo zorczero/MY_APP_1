@@ -59,6 +59,9 @@ class _HutangPelangganState extends State<HutangPelanggan> {
             Future.delayed(const Duration(milliseconds: 200), () {
               navbarProvider.navigateTo(0);
             });
+            Future.delayed(const Duration(milliseconds: 200), () {
+              Navigator.of(context).popUntil((route) => route.isFirst);
+            });
           },
         ),
       ),
